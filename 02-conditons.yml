@@ -1,7 +1,7 @@
 - name: conditions
   hosts: all
   connection: local
-  var:
+  vars:
     fruit: true
     vegetable: true
   tasks:

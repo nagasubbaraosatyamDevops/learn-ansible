@@ -1,0 +1,19 @@
+- name: conditions
+  hosts: all
+  connection: local
+  var:
+    fruit: true
+    vegetable: true
+  tasks:
+    - name: printing fruits name
+      ansible.builtin.debug:
+        msg: fruit name - banana
+      when: fruit is true
+
+    - name: printing vegetable name
+      ansible.builtin.debug:
+        msg: vegetable name - carrot
+      when: vegetable is true
+
+
+
